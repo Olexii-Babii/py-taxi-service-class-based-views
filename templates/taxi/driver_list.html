@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
   {% if driver_list %}
-    <ul>
+    <tbody>
     {% for driver in driver_list %}
       <li><a href="{% url 'taxi:driver-detail' driver.id %}">{{ driver.username }} ({{ driver.first_name }} {{ driver.last_name }})</a></li>
     {% endfor %}
-    </ul>
+    </tbody>
    {% else %}
     <p>Drivers were not found</p>
   {% endif %}
