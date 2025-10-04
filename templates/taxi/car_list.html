@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
   {% if car_list %}
-    <tbody>
+    <ul>
     {% for car in car_list %}
       <li><a href="{% url 'taxi:car-detail' car.id %}">{{ car.model }}</a></li>
     {% endfor %}
-    </tbody>
+    <ul>
   {% else %}
     <p>Cars were not found</p>
   {% endif %}
